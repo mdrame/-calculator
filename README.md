@@ -6,7 +6,7 @@
   
 ## Product:
 
-  * <img src="image/love.png"/>
+  * <img src="image/love.png" align="middle">
   
 ## Todo:
 
