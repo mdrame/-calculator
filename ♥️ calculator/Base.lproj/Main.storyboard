@@ -76,7 +76,7 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eO4-bN-3Ez">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eO4-bN-3Ez">
                                 <rect key="frame" x="20" y="545" width="380" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -89,6 +89,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="caculateOutlet" destination="clX-Rl-rC1" id="Pb2-A6-8f7"/>
                         <outlet property="partnerName" destination="xk3-E4-kQn" id="Epg-1x-zgn"/>
                         <outlet property="result_text_view" destination="eO4-bN-3Ez" id="8gZ-7x-nQH"/>
                         <outlet property="userName" destination="oZY-YF-EcB" id="yA0-xo-aHY"/>
@@ -96,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-57.971014492753625" y="138.61607142857142"/>
+            <point key="canvasLocation" x="-138" y="135"/>
         </scene>
     </scenes>
 </document>

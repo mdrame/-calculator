@@ -18,7 +18,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
+        // making sure user enter user name.
+      
       
     }
 
@@ -31,17 +32,44 @@ class ViewController: UIViewController {
     // user partner textfield
     @IBOutlet weak var partnerName: UITextField!
     
+    // calculate button outlet to hide button just incasue user dont enter names, cause logic is base on the ramdon integer not user names.
+    @IBOutlet weak var caculateOutlet: UIButton!
+    
     // caculate button
     @IBAction func caculate(_ sender: UIButton) {
         
       //create a random varioble to change ever time the vc load
-      var randomInt = Int.random(in: 0...100)
+    let randomInt = Int.random(in: 0...100)
         // testing
         //print(randomInt)
         
         
+        // print these state
+        if randomInt <= 10 {
+            result_text_view.text = message[10]
+        } else if randomInt <= 20 && randomInt > 10 {
+             result_text_view.text = message[20]
+        } else if randomInt <= 30 && randomInt > 20 {
+             result_text_view.text = message[30]
+        } else if randomInt <= 40 && randomInt > 30 {
+             result_text_view.text = message[40]
+        } else if randomInt <= 50 && randomInt > 40 {
+             result_text_view.text = message[50]
+        } else if randomInt <= 60 && randomInt > 50 {
+             result_text_view.text = message[60]
+        } else if randomInt <= 70 && randomInt > 60 {
+             result_text_view.text = message[70]
+        } else if randomInt <= 80 && randomInt > 70 {
+             result_text_view.text = message[80]
+        } else if randomInt <= 90 && randomInt > 80 {
+             result_text_view.text = message[90]
+        } else if randomInt <= 100 && randomInt > 90 {
+             result_text_view.text = message[100]
+        } else {
+            result_text_view.text = " Sorry we can't find your love percentage "
+        }
         
-        
+ 
         
     }
     
