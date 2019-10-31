@@ -6,12 +6,11 @@
   
 ## Product:
 
-  * <img src="image/love.png" align="middle">
+  *
   
 ## Todo:
 
-  * Auto Constraints
-  * Work on a better logic 
+ 
  
 ## Usage:
 
