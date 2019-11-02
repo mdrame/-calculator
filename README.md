@@ -10,7 +10,7 @@
   
 ## Todo:
 
- 
+ * re-do app
  
 ## Usage:
 
