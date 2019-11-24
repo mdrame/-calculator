@@ -2,7 +2,7 @@
 ## BMI Calculator 
 
 
-<img src="one.png"/>
-<img src="two.png"/>
+<img src="one.png">
+<img src="two.png">
 
 
