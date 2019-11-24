@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         
         // Try to optimiz this code in another struct class its dirty
         if brain.calculate(height: Double(height), weight: Double(weight)) <= 100 {
-           bmiValue = brain.calculate(height: Double(height), weight: Double(weight))
+            bmiValue = brain.calculate(height: Double(height), weight: Double(weight))
             background.background = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
             background.fontColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         } else if brain.calculate(height: Double(height), weight: Double(weight)) <= 200 {

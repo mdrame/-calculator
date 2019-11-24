@@ -11,8 +11,6 @@ import Foundation
 
 struct Brain {
     
-
-    
 // Changable function 
     mutating func calculate(height: Double, weight: Double) -> Double {
         
