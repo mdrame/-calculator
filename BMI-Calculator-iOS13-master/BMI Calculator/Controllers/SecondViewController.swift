@@ -19,11 +19,10 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        secondVCLabel.text = "\(bmiValue!)"
+        // converting the bmiValue to a string so I can print a spicif amount of output
+        let convertBmiValue: String = "\(bmiValue!)"
+        secondVCLabel.text = "\(convertBmiValue.prefix(5))"
         view.backgroundColor = viewBackground ?? .purple
-        // test
-        print(view.backgroundColor = viewBackground ?? .purple)
         secondVCLabel.textColor = fonts ?? .blue // Default
         
         // Do any additional setup after loading the view.

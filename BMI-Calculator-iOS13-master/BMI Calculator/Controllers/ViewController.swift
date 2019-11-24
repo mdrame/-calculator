@@ -45,21 +45,19 @@ class ViewController: UIViewController {
         
         let height = heightSlider.value
         let weight = weightsLIDER.value
-//        print("Height \( Double(height)) ")
-//        print("Weight \( Double(weight)) ")
         
         // Try to optimiz this code in another struct class its dirty
-        if brain.calculate(height: Double(height), weight: Double(weight)) <= 20 {
+        if brain.calculate(height: Double(height), weight: Double(weight)) <= 100 {
            bmiValue = brain.calculate(height: Double(height), weight: Double(weight))
             background.background = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
             background.fontColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-        } else if brain.calculate(height: Double(height), weight: Double(weight)) <= 50 {
+        } else if brain.calculate(height: Double(height), weight: Double(weight)) <= 200 {
             bmiValue = brain.calculate(height: Double(height), weight: Double(weight))
             background.background = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
             background.fontColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         } else if brain.calculate(height: Double(height), weight: Double(weight)) <= 500 {
             bmiValue = brain.calculate(height: Double(height), weight: Double(weight))
-            background.background = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+            background.background = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
             background.fontColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
         } else {
             bmiValue = brain.calculate(height: Double(height), weight: Double(weight))

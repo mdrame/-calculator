@@ -17,7 +17,7 @@ struct Brain {
     mutating func calculate(height: Double, weight: Double) -> Double {
         
         let bmi = weight  * height 
-        print("BMI Value:  \(bmi) ")
+//        print("BMI Value:  \(bmi) ")
         return bmi // BMI should returhn Double
     }
     
