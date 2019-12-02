@@ -4,7 +4,7 @@
 
 ### UI:
 
-<img src="ui/one.jpeg">
+<img src="ui/one.jpeg" align="center">
 
 ### Technology: 
     * Swift
