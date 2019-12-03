@@ -71,13 +71,25 @@ class ViewController: UIViewController {
         
         // unable pause button when code run's for the first time
         pauseButtonPressed()
-        
-
-       
-      
+    
     }
     
+    
+    
+    
+    @IBAction func resetPressed(_ sender: UIButton) {
+        
+        labelOutlet.text = "00.00.00"
+        isPlay = false
+        
+        
+    }
+    
+    
+    
+    
     func playButtonPressed() {
+        
         playButtonOutlet.alpha = isPlay ? 0.5 : 1
         // WTF Thinary
         playButtonOutlet.isEnabled = false
@@ -115,9 +127,10 @@ class ViewController: UIViewController {
             
         }
         
-        
-        
+    
     }
+    
+    
     
     
     
