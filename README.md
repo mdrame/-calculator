@@ -12,4 +12,6 @@
     * Swift
 
 ### Todo:
-    * Work on backend
+    * Work on backend ✅
+    * Optimaze  Code to MVC Pattern
+    * Add constraints 

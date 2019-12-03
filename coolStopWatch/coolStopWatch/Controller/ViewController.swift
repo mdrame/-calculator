@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resetOulet: UIButton!
     @IBOutlet var buttonsOutletsCollection: [UIButton]!
-    @IBOutlet weak var labelOutlet: UILabel!
+    @IBOutlet weak var secondLable: UILabel!
+    @IBOutlet weak var minuteLabel: UILabel!
+    @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var playButtonOutlet: UIButton!
     @IBOutlet weak var pauseButtonOutlet: UIButton!
     
@@ -42,24 +44,38 @@ class ViewController: UIViewController {
     
     // Variables
     var timer = Timer()
-    var time: Float = 0
+    var time: Int = 0
     var isPlay = false
+    
+    var minutes: Int =  0
+    var hours: Int = 0
+    
     
    
     
     
     func timerCounting() {
         
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(changeLables), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(changeLables), userInfo: nil, repeats: true)
         
     }
     
     // this function funs ever time the time move by a second
     @objc func changeLables() {
         time += 1
-        labelOutlet.text = "00.\(time)"
+        secondLable.text = "\(time)"
 //        print("test pass")
-        // add breathing animation like a wave 🥰
+        // Write a code so that when timmer reach 60 the munite label incrementa and also the for the hour
+        
+        switch time {
+        case 5:
+            time = 0
+            minutes += 1
+            minuteLabel.text = "\(minutes)"
+        default:
+            print(" Times reach 60 but expected code did not run")
+        }
+        
     }
     
     
@@ -79,7 +95,7 @@ class ViewController: UIViewController {
     
     @IBAction func resetPressed(_ sender: UIButton) {
         
-        labelOutlet.text = "00.00.00"
+        secondLable.text = "00"
         isPlay = false
         
         
@@ -88,10 +104,15 @@ class ViewController: UIViewController {
     
     
     
+ 
+    
+    
+    
+    
     func playButtonPressed() {
         
         playButtonOutlet.alpha = isPlay ? 0.5 : 1
-        // WTF Thinary
+        // WTF 
         playButtonOutlet.isEnabled = false
         pauseButtonOutlet.alpha = isPlay ?  1 : 0.5
         pauseButtonOutlet.isEnabled = true
