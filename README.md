@@ -14,6 +14,7 @@
 
 ### Todo:
     * Work on backend ✅
-    * Display counter properly in UILabel
+    * Display counter properly in UILabel ✅
     * Create Auto constrain
+    * Optimaze Code 
 
