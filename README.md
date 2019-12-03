@@ -6,7 +6,7 @@
 ### UI:
 
 <p align="center">
-<img  width="350" height="700" src="ui/one.jpeg">
+<img  width="350" height="570" src="ui/one.jpeg">
 </p>
 
 ### Technology: 
