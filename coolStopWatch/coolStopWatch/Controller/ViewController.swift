@@ -68,12 +68,23 @@ class ViewController: UIViewController {
         // Write a code so that when timmer reach 60 the munite label incrementa and also the for the hour
         
         switch time {
-        case 5:
+        case 60:
             time = 0
             minutes += 1
             minuteLabel.text = "\(minutes)"
         default:
             print(" Times reach 60 but expected code did not run")
+        }
+        
+        switch minutes {
+        case 60
+            :
+            minutes = 0
+            hours += 1
+            minuteLabel.text = "\(00)"
+            hourLabel.text = "\(hours)"
+        default:
+             print(" Minutes reach 60 but expected code did not run")
         }
         
     }
@@ -95,7 +106,15 @@ class ViewController: UIViewController {
     
     @IBAction func resetPressed(_ sender: UIButton) {
         
+        // resetting Variable
+        time = 0
+        minutes = 0
+        hours = 0
+        
+        // resetting labels
         secondLable.text = "00"
+        minuteLabel.text = "00"
+        hourLabel.text = "00"
         isPlay = false
         
         
