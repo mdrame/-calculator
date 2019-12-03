@@ -12,5 +12,6 @@
     * Swift
 
 ### Todo:
-    * Work on backend
+    * Work on backend ✅
+    * Display counter properly in UILabel
     * Create Auto constrain
