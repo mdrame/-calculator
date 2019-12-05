@@ -17,4 +17,7 @@
     * Display counter properly in UILabel ✅
     * Create Auto constrain
     * Optimaze Code 
+    
+### Usage
+    * Please run app on iphone 11 for there are no contraints yet
 
