@@ -105,6 +105,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func resetPressed(_ sender: UIButton) {
+        // stop time
+         timer.invalidate()
         
         // resetting Variable
         time = 0
@@ -117,19 +119,16 @@ class ViewController: UIViewController {
         hourLabel.text = "00"
         isPlay = false
         
+        pauseButtonPressed()
+        
+        
         
     }
     
     
-    
-    
- 
-    
-    
-    
-    
     func playButtonPressed() {
         
+        // if isPlay is true  activate pause button and unactivate playbutton
         playButtonOutlet.alpha = isPlay ? 0.5 : 1
         // WTF 
         playButtonOutlet.isEnabled = false
@@ -139,6 +138,7 @@ class ViewController: UIViewController {
     
     func pauseButtonPressed() {
         
+        // if isPlay is false  activate play button and unactivate pause button
         pauseButtonOutlet.alpha = isPlay ? 1 : 0.5
         pauseButtonOutlet.isEnabled = false
         playButtonOutlet.alpha = isPlay ? 0.5 : 1
