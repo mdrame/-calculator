@@ -15,9 +15,9 @@
 ### Todo:
     * Work on backend ✅
     * Display counter properly in UILabel ✅
-    * Create Auto constrain
+    * Create Auto constrain 🚫
     * Add Gif to readme ✅
-    * Optimaze Code 
+    * Optimaze Code 🚫
     
 ### Usage
     * Please run app on iphone 11 pro for there are no contraints yet
