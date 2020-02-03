@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var playButtonOutlet: UIButton!
     @IBOutlet weak var pauseButtonOutlet: UIButton!
     
+    var putLabel: CircleLabel!
     
     
     func buttonUI() {
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
         for buttons in buttonsOutletsCollection {
             
             buttons.layer.borderWidth = 2
-//            buttons.layer.borderColor = #colorLiteral(red: 0.1212944761, green: 0.1292245686, blue: 0.141699791, alpha: 1)
+            //            buttons.layer.borderColor = #colorLiteral(red: 0.1212944761, green: 0.1292245686, blue: 0.141699791, alpha: 1)
             buttons.layer.cornerRadius = 60
             buttons.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             buttons.layer.shadowOffset = CGSize(width: 1.0, height: 9.0)
@@ -51,7 +52,7 @@ class ViewController: UIViewController {
     var hours: Int = 0
     
     
-   
+    
     
     
     func timerCounting() {
@@ -64,7 +65,7 @@ class ViewController: UIViewController {
     @objc func changeLables() {
         time += 1
         secondLable.text = "\(time)"
-//        print("test pass")
+        //        print("test pass")
         // Write a code so that when timmer reach 60 the munite label incrementa and also the for the hour
         
         switch time {
@@ -84,10 +85,12 @@ class ViewController: UIViewController {
             minuteLabel.text = "\(00)"
             hourLabel.text = "\(hours)"
         default:
-             print(" Minutes reach 60 but expected code did not run")
+            print(" Minutes reach 60 but expected code did not run")
         }
         
     }
+    
+    
     
     
     override func viewDidLoad() {
@@ -97,8 +100,14 @@ class ViewController: UIViewController {
         buttonUI()
         
         // unable pause button when code run's for the first time
-        pauseButtonPressed()
-    
+//        pauseButtonPressed()
+//        putLabel = CircleLabel(text: "Test", color: .yellow, frame: CGRect(x: 10, y: 10, width: 200, height: 200))
+//
+//        view.addSubview(putLabel)
+        
+        
+   
+        
     }
     
     
@@ -106,7 +115,7 @@ class ViewController: UIViewController {
     
     @IBAction func resetPressed(_ sender: UIButton) {
         // stop time
-         timer.invalidate()
+        timer.invalidate()
         
         // resetting Variable
         time = 0
@@ -145,14 +154,14 @@ class ViewController: UIViewController {
         playButtonOutlet.isEnabled = true
         
     }
- 
+    
     
     
     @IBAction func play_and_pause_button(_ sender: UIButton) {
         
         isPlay.toggle() // toggle change the state of a bool for ever time the action is excuted
-       
-//        timmerOn.toggle() // changing the state of the timmerOn bootle to true and false ever time the button is tap
+        
+        //        timmerOn.toggle() // changing the state of the timmerOn bootle to true and false ever time the button is tap
         switch sender.tag {
         case 0:
             
@@ -160,22 +169,22 @@ class ViewController: UIViewController {
             playButtonPressed()
             print(isPlay)
             
-          
+            
         default:
             timer.invalidate()
             pauseButtonPressed()
             
         }
         
-    
+        
     }
     
     
     
     
     
-
-
+    
+    
 }
 
 
