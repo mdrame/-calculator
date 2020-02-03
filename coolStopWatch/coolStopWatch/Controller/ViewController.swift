@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     
+    // MARK: -> Outlets
+    
     @IBOutlet weak var resetOulet: UIButton!
     @IBOutlet var buttonsOutletsCollection: [UIButton]!
     @IBOutlet weak var secondLable: UILabel!
@@ -22,28 +24,9 @@ class ViewController: UIViewController {
     var putLabel: CircleLabel!
     
     
-    func buttonUI() {
-        // looping over the buttons collection and setting both their properties the same
-        for buttons in buttonsOutletsCollection {
-            
-            buttons.layer.borderWidth = 2
-            //            buttons.layer.borderColor = #colorLiteral(red: 0.1212944761, green: 0.1292245686, blue: 0.141699791, alpha: 1)
-            buttons.layer.cornerRadius = 60
-            buttons.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            buttons.layer.shadowOffset = CGSize(width: 1.0, height: 9.0)
-            buttons.layer.shadowOpacity = 0.9
-            buttons.layer.masksToBounds = false
-        }
-        
-        // resetOulet uid
-        resetOulet.layer.cornerRadius = 20
-        resetOulet.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        resetOulet.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-        resetOulet.layer.shadowOpacity = 2.0
-        resetOulet.layer.masksToBounds = false
-    }
+   
+    // MARK: -> Global Variables
     
-    // Variables
     var timer = Timer()
     var time: Int = 0
     var isPlay = false
@@ -54,6 +37,7 @@ class ViewController: UIViewController {
     
     
     
+    // MARK: -> Global Function
     
     func timerCounting() {
         
@@ -91,6 +75,7 @@ class ViewController: UIViewController {
     }
     
     
+    // MARK: -> ViewDidLoad
     
     
     override func viewDidLoad() {
@@ -111,7 +96,7 @@ class ViewController: UIViewController {
     }
     
     
-    
+    // MARK: -> Actions
     
     @IBAction func resetPressed(_ sender: UIButton) {
         // stop time
@@ -180,6 +165,49 @@ class ViewController: UIViewController {
     }
     
     
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+extension ViewController {
+    
+    
+    
+    // MARK: -> Styling
+    /// This function style the reset button.
+    func buttonUI() {
+           // looping over the buttons collection and setting both their properties the same
+           for buttons in buttonsOutletsCollection {
+               
+               buttons.layer.borderWidth = 2
+               //            buttons.layer.borderColor = #colorLiteral(red: 0.1212944761, green: 0.1292245686, blue: 0.141699791, alpha: 1)
+               buttons.layer.cornerRadius = 60
+               buttons.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+               buttons.layer.shadowOffset = CGSize(width: 1.0, height: 9.0)
+               buttons.layer.shadowOpacity = 0.9
+               buttons.layer.masksToBounds = false
+           }
+           
+           // resetOulet uid
+           resetOulet.layer.cornerRadius = 20
+           resetOulet.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+           resetOulet.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+           resetOulet.layer.shadowOpacity = 2.0
+           resetOulet.layer.masksToBounds = false
+       }
+       
     
     
     
