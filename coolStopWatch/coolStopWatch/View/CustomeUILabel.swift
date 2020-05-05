@@ -10,9 +10,6 @@ import UIKit
 
 class CircleLabel: UILabel {
     
-    
-
-    
       required init(text: String, color: UIColor, frame: CGRect) {
             super.init(frame: frame)
     //        self.color = color

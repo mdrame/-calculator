@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     
     
     // MARK: -> Outlets
-    
     @IBOutlet weak var resetOulet: UIButton!
     @IBOutlet var buttonsOutletsCollection: [UIButton]!
     @IBOutlet weak var secondLable: UILabel!
@@ -26,7 +25,6 @@ class ViewController: UIViewController {
     
    
     // MARK: -> Global Variables
-    
     var timer = Timer()
     var time: Int = 0
     var isPlay = false
@@ -38,14 +36,13 @@ class ViewController: UIViewController {
     
     
     // MARK: -> Global Function
-    
     func timerCounting() {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(changeLables), userInfo: nil, repeats: true)
         
     }
     
-    // this function funs ever time the time move by a second
+    // this function runs ever time the time move by a second
     @objc func changeLables() {
         time += 1
         secondLable.text = "\(time)"
@@ -76,28 +73,18 @@ class ViewController: UIViewController {
     
     
     // MARK: -> ViewDidLoad
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         // ui
         buttonUI()
-        
-        // unable pause button when code run's for the first time
-//        pauseButtonPressed()
-//        putLabel = CircleLabel(text: "Test", color: .yellow, frame: CGRect(x: 10, y: 10, width: 200, height: 200))
-//
-//        view.addSubview(putLabel)
-        
-        
-   
-        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     
     // MARK: -> Actions
-    
     @IBAction func resetPressed(_ sender: UIButton) {
         // stop time
         timer.invalidate()
@@ -114,9 +101,6 @@ class ViewController: UIViewController {
         isPlay = false
         
         pauseButtonPressed()
-        
-        
-        
     }
     
     
@@ -131,7 +115,6 @@ class ViewController: UIViewController {
     }
     
     func pauseButtonPressed() {
-        
         // if isPlay is false  activate play button and unactivate pause button
         pauseButtonOutlet.alpha = isPlay ? 1 : 0.5
         pauseButtonOutlet.isEnabled = false
@@ -160,8 +143,6 @@ class ViewController: UIViewController {
             pauseButtonPressed()
             
         }
-        
-        
     }
     
     
